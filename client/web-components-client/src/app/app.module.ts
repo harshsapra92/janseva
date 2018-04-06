@@ -12,6 +12,7 @@ import { UserRegistrationComponent } from './user-registration/user-registration
 import { UserRegistrationService } from './user-registration.service';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { RequestMiniViewComponent } from './request-mini-view/request-mini-view.component';
+import { RequestExpandedViewComponent } from './request-expanded-view/request-expanded-view.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RequestMiniViewComponent } from './request-mini-view/request-mini-view.
     NavbarComponent,
     UserRegistrationComponent,
     RequestFormComponent,
-    RequestMiniViewComponent
+    RequestMiniViewComponent,
+    RequestExpandedViewComponent
   ],
   imports: [
     BrowserModule,
