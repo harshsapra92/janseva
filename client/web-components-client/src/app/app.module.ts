@@ -10,13 +10,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { UserRegistrationService } from './user-registration.service';
+import { RequestFormComponent } from './request-form/request-form.component';
+import { RequestMiniViewComponent } from './request-mini-view/request-mini-view.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    RequestFormComponent,
+    RequestMiniViewComponent
   ],
   imports: [
     BrowserModule,
