@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+    <!-- general form elements -->
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">User Registration</h3>
+      </div>
+      <!-- /.box-header -->
+      <!-- form start -->
+      <form (onSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="box-body">
+          
+          <div class="form-group" [ngClass]="{'has-error': phoneNumber.errors && (phoneNumber.dirty || phoneNumber.touched)}">
+            <label for="phoneNumber">Phone number</label>
+            <input type="text"  
+              class="form-control" 
+              id="phoneNumber" 
+              name="phoneNumber"
+              placeholder="Phone number"
+              pattern="^\d{10}$"
+              [(ngModel)]="user.phoneNumber"
+              #phoneNumber="ngModel"
+              required>
+              <span *ngIf="phoneNumber.errors && (phoneNumber.dirty || phoneNumber.touched)">
+                <span *ngIf="phoneNumber.errors.required" class="help-block">Phone number is required</span>
+                <span *ngIf="phoneNumber.errors.pattern" class="help-block">Enter 10 digit phone number</span>
+              </span>
+          </div>
+
+          <div class="form-group" [ngClass]="{'has-error': email.errors && (email.dirty || email.touched)}">
+            <label for="email">Email</label>
+            <input type="email" 
+              class="form-control" 
+              id="email"
+              name="email"
+              placeholder="Email"
+              pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+              [(ngModel)]="user.emailAddress"
+              #email="ngModel"
+              required>
+              <span *ngIf="email.errors && (email.dirty || email.touched)">
+                <span *ngIf="email.errors.required" class="help-block">Email is required</span>
+                <span *ngIf="email.errors.pattern" class="help-block">Enter valid email address</span>
+              </span>
+          </div>
+
+          <div class="form-group" [ngClass]="{'has-error': address.errors && (address.dirty || address.touched)}">
+            <label for="address">Address</label>
+            <input type="text" 
+              class="form-control" 
+              id="address"
+              name="address"
+              placeholder="Address"
+              [(ngModel)]="user.address"
+              #address="ngModel"
+              required>
+              <span *ngIf="address.errors && (address.dirty || address.touched)">
+                <span *ngIf="address.errors.required" class="help-block">Email is required</span>
+              </span>
+          </div>
+        </div>
+        <!-- /.box-body -->
+
+        <div class="box-footer">
+          <button type="button" 
+            class="btn btn-primary" 
+            [disabled]="!userForm.form.valid"
+            (click)="onSubmit()">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- /.box -->
+
+  </div>
+</div>
