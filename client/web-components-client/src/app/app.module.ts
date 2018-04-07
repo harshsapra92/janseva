@@ -16,6 +16,12 @@ import { RequestExpandedViewComponent } from './request-expanded-view/request-ex
 import { ShareWidgetComponent } from './share-widget/share-widget.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SectionComponent } from './section/section.component';
+import { CommentsComponent } from './comments/comments.component';
+import { DashboardFiltersComponent } from './dashboard-filters/dashboard-filters.component';
+import { DashboardService } from './dashboard.service';
 
 
 @NgModule({
@@ -28,17 +34,23 @@ import { RegisterComponent } from './register/register.component';
     RequestExpandedViewComponent,
     ShareWidgetComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent,
+    SectionComponent,
+    CommentsComponent,
+    DashboardFiltersComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
-    UserRegistrationService
+    UserRegistrationService,
+    DashboardService
   ],
   bootstrap: [AppComponent]
 })
