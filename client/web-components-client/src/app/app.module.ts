@@ -15,6 +15,7 @@ import { RequestMiniViewComponent } from './request-mini-view/request-mini-view.
 import { RequestExpandedViewComponent } from './request-expanded-view/request-expanded-view.component';
 import { ShareWidgetComponent } from './share-widget/share-widget.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { LoginComponent } from './login/login.component';
     RequestMiniViewComponent,
     RequestExpandedViewComponent,
     ShareWidgetComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
