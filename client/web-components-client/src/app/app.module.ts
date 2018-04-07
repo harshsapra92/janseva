@@ -13,6 +13,8 @@ import { UserRegistrationService } from './user-registration.service';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { RequestMiniViewComponent } from './request-mini-view/request-mini-view.component';
 import { RequestExpandedViewComponent } from './request-expanded-view/request-expanded-view.component';
+import { ShareWidgetComponent } from './share-widget/share-widget.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { RequestExpandedViewComponent } from './request-expanded-view/request-ex
     UserRegistrationComponent,
     RequestFormComponent,
     RequestMiniViewComponent,
-    RequestExpandedViewComponent
+    RequestExpandedViewComponent,
+    ShareWidgetComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
