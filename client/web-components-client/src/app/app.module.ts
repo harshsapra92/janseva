@@ -10,23 +10,35 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { UserRegistrationService } from './user-registration.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SectionComponent } from './section/section.component';
+import { CommentsComponent } from './comments/comments.component';
+import { DashboardFiltersComponent } from './dashboard-filters/dashboard-filters.component';
+import { DashboardService } from './dashboard.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    DashboardComponent,
+    SectionComponent,
+    CommentsComponent,
+    DashboardFiltersComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
-    UserRegistrationService
+    UserRegistrationService,
+    DashboardService
   ],
   bootstrap: [AppComponent]
 })
